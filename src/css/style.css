@@ -1,0 +1,121 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+/* layout */
+#wrapper{
+  width: 100vw; 
+  display: grid;
+  grid-template-rows: 200px 100% 200px;
+  grid-template-columns: 100%;
+  grid-template-areas:  "header"
+                        "main"
+                        "footer";
+}
+
+header, main, footer{
+  background-color: #1d3557;
+  color: #f1faee;
+  border: solid .5px #f1faee;
+}
+
+header{
+  grid-area: header;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main{
+  grid-area: main;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  gap: 50px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer{
+  grid-area: footer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+form{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+form section{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+form section section{
+  width: auto;
+  display: flex;
+  gap: 5px;
+}
+
+form div{
+  width: 100%;
+}
+#filter div{
+  width: 45%;
+}
+#filter div input{
+  width: 100%;
+}
+
+
+/* table */
+table, td, thead, tfoot{
+  border: #f1faee .5px solid;
+}
+table{
+  width: 100%;
+}
+tbody{
+  width: 100%;
+}
+td{
+  width: 33%;
+}
+
+/* components */
+button{
+  cursor: pointer;
+  background-color: #f1faee;
+  color: #1d3557;
+  border: none;
+  position: relative;
+  padding: 2px;
+}
+input{
+  width: 45%;
+  background-color: #f1faee;
+  color: #1d3557;
+  border: none;
+}
+button, input{
+  border-radius: 5px;
+}
+input, td{
+  text-align: center;
+}

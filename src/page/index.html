@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="../css/style.css">
+  <link type="text/css" rel="stylesheet" href="../css/responsive.css">
+  <title>Controle financeiro</title>
+</head>
+<body>
+  <section id="wrapper">
+    <header>
+      <h1>Logo</h1>
+      <nav></nav>
+    </header>
+
+    <main>
+      <form>
+        <section>
+          <input type="text" placeholder="descrição" name="description"/>
+          <input type="number" placeholder="valor" name="value">
+          <section>
+            <button>+</button>
+            <button>−</button>
+          </section>
+        </section>
+      </form>
+
+      <form>
+        <div>
+          <label for="filter"><h2>Filtro</h2></label>
+          <section id="filter">
+            <div>
+              <label for="start"><p>Inicio</p></label>
+              <input id="start" type="date" placeholder="inicio" name="start">
+            </div>
+              
+            <div>
+              <label for="end"><p>Fim</p></label>
+              <input id="end" type="date" placeholder="fim" name="end"> 
+            </div>
+
+            <button type="submit">Filtrar</button>
+          </section>
+        </div>
+        
+        <div>
+          <label for="revenue"><h2>Receita(+)</h2></label>
+          <table id="revenue">
+            <thead>
+              <td>Descrição</td>
+              <td>Valor</td>
+              <td>Data</td>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+        
+        <div>
+          <label for="costs"><h2>Custos(-)</h2></label>
+          <table id="costs">
+            <thead>
+              <td>Descrição</td>
+              <td>Valor</td>
+              <td>Data</td>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+
+        <div>
+          <label for="balance"><h2>Saldo</h2></label>
+          <input id="balance" type="number" readonly>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <ul class="footer-list">
+        <h1>Contato</h1>
+        <li>email</li>
+        <li>telefone</li>
+      </ul>
+      <ul class="footer-list">
+        <h1>Endereço</h1>
+        <li>rua</li>
+        <li>numero</li>
+        <li>cidade</li>
+      </ul>
+    </footer>
+  </section>
+  <script src="../index.js"></script>
+</body>
+</html>
