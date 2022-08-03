@@ -39,14 +39,14 @@
       </form>
       
 
-      <div id="containerFilter">
-        <label for="filter"><h1>Filtro</h1></label>
-        <section id="filter">
-          <input id="dateStart" type="date" placeholder="inicio" name="start">
-          <input id="dateEnd" type="date" placeholder="fim" name="end"> 
-          <button id="btnFilter">Filter</button>
-        </section>
-      </div>
+  
+      <label for="filter"><h1>Filtro</h1></label>
+      <section id="filter">
+        <input id="dateStart" type="date" placeholder="inicio" name="start">
+        <input id="dateEnd" type="date" placeholder="fim" name="end"> 
+        <button id="btnFilter">Filter</button>
+      </section>
+    
 
       <div>
         <label for="revenue"><h1>Ganhos(+)</h1></label>
@@ -61,10 +61,20 @@
         </table>
       </div>
 
-      <div>
-        <label for="balance"><h2>Saldo</h2></label>
-        <input id="balance" type="number" readonly/>
-      </div>
+      <section id="total">
+        <div>
+          <label for="totalCosts"><h2>Total de Custos</h2></label>
+          <input id="totalCosts" type="number" readonly/>
+        </div>
+        <div>
+          <label for="totalRevenue"><h2>Total de Ganhos</h2></label>
+          <input id="totalRevenue" type="number" readonly/>
+        </div>
+        <div>
+          <label for="totalRevenue"><h2>Saldo</h2></label>
+          <input id="balance" type="number" readonly/>
+        </div>
+      </section>
     </main>
 
     <footer>
