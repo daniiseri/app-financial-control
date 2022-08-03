@@ -21,9 +21,9 @@
         <section id="createCost">
           <input id="costDescription" type="text" placeholder="descrição" name="description"/>
           <input id="costValue" type="number" placeholder="valor" name="value">
-          <section>
-            <button type="submit">−</button>
-          </section>
+          
+          <button type="submit">−</button>
+          
         </section>
       </form>
 
@@ -32,38 +32,31 @@
         <section id="createRevenue">
           <input id="revenueDescription" type="text" placeholder="descrição" name="description"/>
           <input id="revenueValue" type="number" placeholder="valor" name="value">
-          <section>
-            <button type="submit">+</button>
-          </section>
+          
+          <button type="submit">+</button>
+          
         </section>
       </form>
       
 
-        <div>
-          <label for="filter"><h2>Filtro</h2></label>
-          <section id="filter">
-            <div>
-              <label for="dateStart"><p>Inicio</p></label>
-              <input id="dateStart" type="date" placeholder="inicio" name="start">
-            </div>
-                
-            <div>
-              <label for="dateEnd"><p>Fim</p></label>
-              <input id="dateEnd" type="date" placeholder="fim" name="end"> 
-            </div>
-            <span id="alertFilter"></span>
-            <button id="btnFilter">Filtrar</button>
-          </section>
-        </div>
+      <div id="containerFilter">
+        <label for="filter"><h1>Filtro</h1></label>
+        <section id="filter">
+          <input id="dateStart" type="date" placeholder="inicio" name="start">
+          <input id="dateEnd" type="date" placeholder="fim" name="end"> 
+          <button id="btnFilter">Filter</button>
+        </section>
+      </div>
+
       <div>
-        <label for="revenue"><h2>Ganhos(+)</h2></label>
+        <label for="revenue"><h1>Ganhos(+)</h1></label>
         <table id="revenue">
           
         </table>
       </div>
         
       <div>
-        <label for="costs"><h2>Despesas(-)</h2></label>
+        <label for="costs"><h1>Despesas(-)</h1></label>
         <table id="costs">
         </table>
       </div>

@@ -67,14 +67,13 @@ form section{
   justify-content: flex-start;
   gap: 5px;
 }
-form section section{
-  width: auto;
-  display: flex;
-  gap: 5px;
+form section button{
+  width: 10%;
 }
 
-form div{
-  width: 100%;
+#filter{
+  display: flex;
+  gap: 5px;
 }
 #filter div{
   width: 45%;
@@ -85,7 +84,7 @@ form div{
 
 
 /* table */
-table, td, thead, tfoot{
+table, thead, tfoot{
   border: #f1faee .5px solid;
 }
 table{
@@ -96,6 +95,10 @@ tbody{
 }
 td{
   width: 33%;
+  font-weight: 900;
+}
+input, td{
+  padding: 10px;
 }
 
 /* components */
@@ -104,8 +107,8 @@ button{
   background-color: #f1faee;
   color: #1d3557;
   border: none;
-  position: relative;
   padding: 2px;
+  width: 10%;
 }
 input{
   width: 45%;
@@ -120,8 +123,12 @@ input, td{
   text-align: center;
 }
 tr:nth-child(even){
-  background-color: #457b9d;
+  background-color: #f1faee;
+  color: #1d3557;
 }
-#cost .value{
-  color: #e63846;
+#containerFilter{
+  width: 100%;
+}
+label{
+  width: 100%;
 }
