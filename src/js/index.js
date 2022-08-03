@@ -4,8 +4,7 @@ const tRevenue = document.querySelector('#revenue');
 const url = 'http://localhost:8080';
 
 const getCosts = async (idUser)=>{
-  const acess = await fetch(`${url}/cost/${idUser}`);
-  const costs = await acess.json();
+  const costs = await acess(`cost/${idUser}`);
   
   tCost.appendChild(createThead());
 
@@ -18,8 +17,7 @@ const getCosts = async (idUser)=>{
 }
 
 const getRevenue = async (idUser)=>{
-  const acess = await fetch(`${url}/revenue/${idUser}`);
-  const costs = await acess.json();
+  const costs = await acess(`revenue/${idUser}`);
   
   tRevenue.appendChild(createThead());
 
@@ -63,6 +61,52 @@ const createRow = (data)=>{
   tr.appendChild(tdDate);
 
   return tr;
+}
+
+const acess = async (route)=>{
+  const acess = await fetch(`${url}/${route}`);
+  const data = await acess.json();
+  
+  return data
+}
+
+const actionPost = async (url, body)=>{
+  const cost = await fetch(url, {method:'POST', body:JSON.stringify(body), bodyUsed:true, headers:{'Content-type': 'application/json'}});
+}
+
+
+const createCost= ()=>{
+  event.preventDefault();
+
+  const newCost = `${url}/cost/1`;
+  let description = document.querySelector('#costDescription').value;
+  let value = document.querySelector('#costValue').value;
+  
+  const body = {
+    "description": description, 
+    "value": value
+  };
+
+  actionPost(newCost, body);
+  location.reload();
+  alert('Cadastro realizado com sucesso!');
+}
+
+const createRevenue= ()=>{
+  event.preventDefault();
+
+  const newRevenue = `${url}/revenue/1`;
+  let description = document.querySelector('#revenueDescription').value;
+  let value = document.querySelector('#revenueValue').value;
+
+  const body = {
+    "description": description, 
+    "value": value
+  };
+
+  actionPost(newRevenue, body);
+  location.reload();
+  alert('Cadastro realizado com sucesso!');
 }
 
 getCosts(1);
