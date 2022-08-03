@@ -16,68 +16,48 @@
     </header>
 
     <main>
-      <form>
+      <section>
+        <input type="text" placeholder="descrição" name="description"/>
+        <input type="number" placeholder="valor" name="value">
         <section>
-          <input type="text" placeholder="descrição" name="description"/>
-          <input type="number" placeholder="valor" name="value">
-          <section>
-            <button>+</button>
-            <button>−</button>
-          </section>
+          <button>+</button>
+          <button>−</button>
         </section>
-      </form>
+      </section>
 
-      <form>
-        <div>
-          <label for="filter"><h2>Filtro</h2></label>
-          <section id="filter">
-            <div>
-              <label for="start"><p>Inicio</p></label>
-              <input id="start" type="date" placeholder="inicio" name="start">
-            </div>
+      <div>
+        <label for="filter"><h2>Filtro</h2></label>
+        <section id="filter">
+          <div>
+            <label for="start"><p>Inicio</p></label>
+            <input id="start" type="date" placeholder="inicio" name="start">
+          </div>
               
-            <div>
-              <label for="end"><p>Fim</p></label>
-              <input id="end" type="date" placeholder="fim" name="end"> 
-            </div>
+          <div>
+            <label for="end"><p>Fim</p></label>
+            <input id="end" type="date" placeholder="fim" name="end"> 
+          </div>
 
-            <button type="submit">Filtrar</button>
-          </section>
-        </div>
+          <button type="submit">Filtrar</button>
+        </section>
+      </div>
+      <div>
+        <label for="revenue"><h2>Receita(+)</h2></label>
+        <table id="revenue">
+          
+        </table>
+      </div>
         
-        <div>
-          <label for="revenue"><h2>Receita(+)</h2></label>
-          <table id="revenue">
-            <thead>
-              <td>Descrição</td>
-              <td>Valor</td>
-              <td>Data</td>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot></tfoot>
-          </table>
-        </div>
-        
-        <div>
-          <label for="costs"><h2>Custos(-)</h2></label>
-          <table id="costs">
-            <thead>
-              <td>Descrição</td>
-              <td>Valor</td>
-              <td>Data</td>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot></tfoot>
-          </table>
-        </div>
+      <div>
+        <label for="costs"><h2>Custos(-)</h2></label>
+        <table id="costs">
+        </table>
+      </div>
 
-        <div>
-          <label for="balance"><h2>Saldo</h2></label>
-          <input id="balance" type="number" readonly>
-        </div>
-      </form>
+      <div>
+        <label for="balance"><h2>Saldo</h2></label>
+        <input id="balance" type="number" readonly>
+      </div>
     </main>
 
     <footer>
@@ -94,6 +74,6 @@
       </ul>
     </footer>
   </section>
-  <script src="../index.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>
