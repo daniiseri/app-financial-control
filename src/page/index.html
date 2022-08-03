@@ -16,40 +16,54 @@
     </header>
 
     <main>
-      <section>
-        <input type="text" placeholder="descrição" name="description"/>
-        <input type="number" placeholder="valor" name="value">
-        <section>
-          <button>+</button>
-          <button>−</button>
+      <form onsubmit="createCost()">
+        <label for="createCost"><h1>Despesa</h1></label>
+        <section id="createCost">
+          <input id="costDescription" type="text" placeholder="descrição" name="description"/>
+          <input id="costValue" type="number" placeholder="valor" name="value">
+          <section>
+            <button type="submit">−</button>
+          </section>
         </section>
-      </section>
+      </form>
 
-      <div>
-        <label for="filter"><h2>Filtro</h2></label>
-        <section id="filter">
-          <div>
-            <label for="start"><p>Inicio</p></label>
-            <input id="start" type="date" placeholder="inicio" name="start">
-          </div>
-              
-          <div>
-            <label for="end"><p>Fim</p></label>
-            <input id="end" type="date" placeholder="fim" name="end"> 
-          </div>
-
-          <button type="submit">Filtrar</button>
+      <form onsubmit="createRevenue()">
+        <label for="createRevenue"><h1>Ganho</h1></label>
+        <section id="createRevenue">
+          <input id="revenueDescription" type="text" placeholder="descrição" name="description"/>
+          <input id="revenueValue" type="number" placeholder="valor" name="value">
+          <section>
+            <button type="submit">+</button>
+          </section>
         </section>
-      </div>
+      </form>
+      
+
+        <div>
+          <label for="filter"><h2>Filtro</h2></label>
+          <section id="filter">
+            <div>
+              <label for="dateStart"><p>Inicio</p></label>
+              <input id="dateStart" type="date" placeholder="inicio" name="start">
+            </div>
+                
+            <div>
+              <label for="dateEnd"><p>Fim</p></label>
+              <input id="dateEnd" type="date" placeholder="fim" name="end"> 
+            </div>
+            <span id="alertFilter"></span>
+            <button id="btnFilter">Filtrar</button>
+          </section>
+        </div>
       <div>
-        <label for="revenue"><h2>Receita(+)</h2></label>
+        <label for="revenue"><h2>Ganhos(+)</h2></label>
         <table id="revenue">
           
         </table>
       </div>
         
       <div>
-        <label for="costs"><h2>Custos(-)</h2></label>
+        <label for="costs"><h2>Despesas(-)</h2></label>
         <table id="costs">
         </table>
       </div>
