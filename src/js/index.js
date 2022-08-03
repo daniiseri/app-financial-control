@@ -1,5 +1,10 @@
 const tCost = document.querySelector('#costs');
 const tRevenue = document.querySelector('#revenue');
+const totalCost = document.querySelectorAll('#cost .value');
+const totalRevenue = document.querySelectorAll('#revenue .value');
+const balance = document.querySelector('#balance');
+
+let sum=0;
 
 const url = 'http://localhost:8080';
 
@@ -12,8 +17,9 @@ const getCosts = async (idUser)=>{
   tCost.appendChild(tbody);
 
   for(cost of costs){
-    tCost.appendChild(createRow(cost));
+    tCost.appendChild(createRow(cost, 'cost'));
   }
+  balance.textContent = sum;
 }
 
 const getRevenue = async (idUser)=>{
@@ -25,8 +31,9 @@ const getRevenue = async (idUser)=>{
   tRevenue.appendChild(tbody);
 
   for(cost of costs){
-    tRevenue.appendChild(createRow(cost));
+    tRevenue.appendChild(createRow(cost, 'revenue'));
   }
+  balance.textContent = sum;
 }
 
 const createThead = ()=>{
@@ -46,11 +53,23 @@ const createThead = ()=>{
   return thead;
 }
 
-const createRow = (data)=>{
+const createRow = (data, type)=>{
+  if(type === 'cost')
+  sum-=Number(data.value);
+  else
+  sum+=Number(data.value);
+
   const tr = document.createElement('tr');
   const tdDescription = document.createElement('td');
   const tdValue = document.createElement('td');
   const tdDate = document.createElement('td');
+
+  tdValue.className = 'value';
+  tdValue.setAttribute('type', 'number');
+  tdDate.setAttribute('type', 'date');
+
+  data.date = new Date();
+  data.date.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
 
   tdDescription.innerHTML = data.description;
   tdValue.innerHTML = data.value;

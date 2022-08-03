@@ -119,3 +119,9 @@ button, input{
 input, td{
   text-align: center;
 }
+tr:nth-child(even){
+  background-color: #457b9d;
+}
+#cost .value{
+  color: #e63846;
+}
