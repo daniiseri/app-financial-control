@@ -107,6 +107,12 @@ button{
   padding: 2px;
   width: 10%;
 }
+button:hover, tr:hover{
+  opacity: .8;
+}
+tr{
+  cursor: pointer;
+}
 input{
   width: 45%;
   background-color: #f1faee;

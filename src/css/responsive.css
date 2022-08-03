@@ -5,4 +5,8 @@
     align-items: center;
     width: 100%;
   }
+
+  footer, header{
+    flex-direction: row;
+  }
 }
